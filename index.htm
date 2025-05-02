@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" type="image/png" href="./img/prkicon.png">
     <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +14,7 @@
 </head>
 <body class="bg-[rgb(55,55,55)]">
    <div class="flex items-center h-[85px] justify-center w-full">
-        <img  class="w-[150px] h-[80px]" src="./img/logo (1).svg" alt="">
+        <img  class="w-[150px] h-[80px] z-999999" src="./img/logo (1).svg" alt="">
    </div>
    <div class="swiper h-[100vh] mt-2 desktop:min-h-[600px] max-desktop:h-[50vh] max-tablet:h-[34vh] max-mobile:h-[30vh] max-desktop:w-[97vw] max-desktop:rounded-[18px] m-auto">
     <div class="swiper-wrapper">
@@ -45,7 +46,7 @@
             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-[#D9DADB] text-[24px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </div>
    </div>
-   <div onclick="openModal()" id="modal" class="inset-0 hidden fixed h-full bg-[#00000096] w-full flex items-end z-[999]">
+   <div onclick="openModal()" id="modal" class="inset-0 hidden fixed h-full bg-[#000000be] w-full flex items-end z-[999]">
     <div onclick="event.stopPropagation();" id="modalContent" class="bg-[rgba(55,55,55,0.70)] transform translate-y-full transition-transform duration-300 rounded-t-[16px] w-full">
         <div class="h-[20px] w-full grid  place-items-center">
             <div onclick="openModal()" class="w-[80px] h-[3px] rounded-full bg-[grey]"> </div>
