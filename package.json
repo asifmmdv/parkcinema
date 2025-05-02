@@ -1,0 +1,17 @@
+{
+  "name": "papadata-render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "json-server": "^0.16.2",
+    "tailwindcss": "^4.1.4"
+  }
+}

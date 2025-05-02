@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="bg-[rgb(55,55,55)]">
+   <div class="flex items-center h-[85px] justify-center w-full">
+        <img  class="w-[150px] h-[80px]" src="./img/logo (1).svg" alt="">
+   </div>
+   <div class="swiper h-[100vh] mt-2 desktop:min-h-[600px] max-desktop:h-[50vh] max-tablet:h-[34vh] max-mobile:h-[30vh] max-desktop:w-[97vw] max-desktop:rounded-[18px] m-auto">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide relative h-full">
+            <img src="./img/slide1.webp" class="h-full w-full" alt="sld1">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-90"></div>
+            <div class="h-full w-28 bg-no-repeat bg-contain bg-center bg-[url('/img/nav-bg.svg')] absolute -right-8 top-1/2 bg-transparent transform -translate-y-1/2 opacity-70 max-tablet:w-16 max-mobile:w-24 z-[1000000]"></div>
+        </div>
+        <div class="swiper-slide relative h-full">
+            <img src="./img/slide2.webp" class="h-full w-full" alt="sld2">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-90"></div>
+            <div class="h-full w-28 bg-no-repeat bg-contain bg-center bg-[url('/img/nav-bg.svg')] absolute -right-8 top-1/2 bg-transparent transform -translate-y-1/2 opacity-70 max-tablet:w-16 max-mobile:w-24 z-[1000000]"></div>
+        </div>
+        <div class="swiper-slide relative h-full">
+            <img src="./img/slide3.webp" class="h-full w-full" alt="sld3">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-90"></div>
+            <div class="h-full w-28 bg-no-repeat bg-contain bg-center bg-[url('/img/nav-bg.svg')] absolute -right-8 top-1/2 bg-transparent transform -translate-y-1/2 opacity-70 max-tablet:w-16 max-mobile:w-24 z-[1000000]"></div>
+        </div>
+        <div class="swiper-slide relative h-full">
+            <img src="./img/slide4.webp" class="h-full w-full" alt="sld4">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-90"></div>
+            <div class="h-full w-28 bg-no-repeat bg-contain bg-center bg-[url('/img/nav-bg.svg')] absolute -right-8 top-1/2 bg-transparent transform -translate-y-1/2 opacity-70 max-tablet:w-16 max-mobile:w-24 z-[1000000]"></div>
+        </div>
+    </div> 
+    <div class="swiper-button-next"></div>
+   </div>
+   <div onclick="openModal()" class="max-desktop:block desktop:hidden">
+        <div class="w-14 h-14 rounded-full border border-[#D9DADB] flex items-center justify-center cursor-pointer fixed bottom-8 left-8  bg-[#ff00004a] backdrop-blur-sm z-20">
+            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-[#D9DADB] text-[24px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </div>
+   </div>
+   <div onclick="openModal()" id="modal" class="inset-0 hidden fixed h-full bg-[#00000096] w-full flex items-end z-[999]">
+    <div onclick="event.stopPropagation();" id="modalContent" class="bg-[rgba(55,55,55,0.70)] transform translate-y-full transition-transform duration-300 rounded-t-[16px] w-full">
+        <div class="h-[20px] w-full grid  place-items-center">
+            <div onclick="openModal()" class="w-[80px] h-[3px] rounded-full bg-[grey]"> </div>
+        </div>
+        <div>
+            <div>
+                <div class="grid grid-cols-2 gap-3 px-5 py-4 w-full">
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px]">
+                        <img alt="icon" class="w-[44px] h-[44px]"  src="./img/glasses.webp">
+                        <span class="text-[#202735] text-base">Profil</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px]">
+                        <img alt="icon" class="w-[44px] h-[44px]"  src="./img/ticket.webp">
+                        <span class="text-[#202735] text-base">Mənim Biletlərim</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px] justify-center col-span-2 ">
+                        <img alt="icon" class="w-[44px] h-[44px]" src="./img/film.webp">
+                        <span class="text-[#202735] text-base">Kinoteatrlar</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl min-h-[72px] col-span-2 py-2 justify-center">
+                        <img alt="icon" class="w-[44px] h-[44px]"  src="./img/alarm.png">
+                        <span class="text-[#202735] text-base">Aksiyalar</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px]">
+                        <img alt="icon" class="w-[44px] h-[44px]" src="/img/call.svg">
+                        <span class="text-[#202735] text-base">Əlaqə</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px]">
+                        <img alt="icon" class="w-[44px] h-[44px]" src="/img/faq.svg">
+                        <span class="text-[#202735] text-base">FAQ</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px] max-tablet:px-2.5">
+                        <img alt="icon" class="w-[44px] h-[44px] undefined" src="/img/terms.svg">
+                        <span class="text-[#202735] text-base text-[14px]">Hüquqi Şərtlər</span>
+                    </div>
+                    <div class="flex items-center gap-2 px-2.5 bg-[#D9DADB] rounded-xl py-2 min-h-[72px] !p-0" >
+                        <img alt="icon" class="w-[44px] h-[44px] w-full h-full" src="/img/google-play.svg" style="color: transparent;"></a>
+                    </div>
+                </div>
+                <div class="w-[140px] px-5 pb-2">
+                    <div class="relative">
+                        <div onclick="openFlags()" class="flex items-center gap-3 min-w-[90px] cursor-pointer">
+                            <img alt="aze" class="w-[25px] h-[25px]" src="/img/az-flag.svg">
+                            <span class="min-w-[30px] inline-block text-white text-sm">AZE</span>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"></path>
+                            </svg>
+                        </div>
+                        <ul id="flags" class="flex flex-col gap-4 absolute bg-[#dbd9d9] rounded-md py-3 duration-200 w-full px-1 mt-2 flex hidden bottom-full">
+                            <li class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                <a class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                    <img alt="flag" class="w-[25px] h-[25px]" src="/img/az-flag.svg">
+                                    <span>AZE</span>
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                <a class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                    <img alt="flag" class="w-[25px] h-[25px]" src="/img/en-flag.svg">
+                                    <span>EN</span>
+                                </a>
+                            </li>
+                            <li class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                <a class="flex items-center gap-3 cursor-pointer w-full h-full">
+                                    <img alt="flag" class="w-[25px] h-[25px]" src="/img/ru-flag.svg">
+                                    <span>RU</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/swiper.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+body{
+    font-family: "Fira Sans", sans-serif;
+}
+
+@theme {
+    --breakpoint-mobile: 420px;
+    --breakpoint-tablet:650px;
+    --breakpoint-desktop: 770px;
+  }
+
+  .swiper-button-next{
+    color: rgb(172,172,172) !important; 
+    right: 2px !important;
+  }
+  .swiper-button-next:after {
+    font-size: 22px !important;
+  }
+  @media only screen and (min-width:420px) {
+      .swiper-button-next {
+          right: -4px !important;
+        }
+  }
+@media only screen and (min-width: 650px) {
+    .swiper-button-next:after {
+        font-size: 44px !important;
+      }
+      .swiper-button-next {
+        right: 20px !important;
+      }
+}
+
