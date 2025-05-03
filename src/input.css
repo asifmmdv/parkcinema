@@ -3,12 +3,20 @@
 body{
     font-family: "Fira Sans", sans-serif;
 }
-
-@theme {
-    --breakpoint-mobile: 420px;
-    --breakpoint-tablet:650px;
-    --breakpoint-desktop: 770px;
+    body::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 3px;
+    height: 240px;
   }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  @theme {
+      --breakpoint-mobile: 420px;
+      --breakpoint-tablet:650px;
+      --breakpoint-desktop: 770px;
+    }
 
   .swiper-button-next{
     color: rgb(172,172,172) !important; 

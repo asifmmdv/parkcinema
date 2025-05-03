@@ -14,7 +14,9 @@ function openModal() {
         }, 300);
     }
 }
-const flags = document.getElementById('flags')
+const flags = document.querySelectorAll('.flags')
 function openFlags(){
-    flags.classList.toggle('hidden')
+    flags.forEach(element => {
+        element.classList.toggle("hidden")
+    });
 }
