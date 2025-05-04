@@ -55,3 +55,46 @@ function openDD2() {
     underline2.classList.remove('w-full');
   }
 }
+
+const data = []
+const films = document.getElementById('films')
+
+function getAllFims(){
+    useGetAllFilms()
+      .then(mel => {
+        data.length = 0
+        data.push(...mel)
+        showAllFilms()
+      })
+}
+getAllFims()
+
+function showAllFilms(){
+  films.innerHTML = ""
+  data.map(item => {
+      films.innerHTML += `
+         <div class="group">
+              <a target="_self" href="/az/movie/${item.id}">
+                  <div class="aspect-[290/480] max-tablet:w-full rounded-[18px] shadow-box relative cursor-pointer flex items-center overflow-hidden">
+                      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000000] via-[#0000004E] to-[#000000] z-[10]"></div>
+                      <img alt="movie" class="absolute top-0 left-0 object-cover scale-100 group-hover:scale-105 duration-300 z-0 w-full h-full" src="https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F${item.image}&w=640&q=75" alt="${item.name}">
+                      <div class="absolute bottom-0 left-0 w-full px-3 pb-4 z-10">
+                          <h2 class="mb-3 text-white text-[22px] font-semibold">${item.name}</h2>
+                          <div class="text-[#D9DADB] text-[14px]">${new Date(item.firstScreeningDate).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.')}</div>
+                          <div class="flex items-center justify-between">
+                              <div class="text-[#D9DADB]">${item.ageLimit === 'SIXTEEN' ? '16+' : item.ageLimit === 'EIGHTEEN' ? '18+' : '12+'}</div>
+                              <div class="flex items-center gap-2">
+                                  ${item.languages.map(lang => `
+                                      <div class="w-6 h-6">
+                                          <img alt="${lang} flag" loading="lazy" width="24" height="24" class="w-full h-full" src="/img/${lang.toLowerCase()}-flag.svg">
+                                      </div>
+                                  `).join('')}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      `
+  })
+}

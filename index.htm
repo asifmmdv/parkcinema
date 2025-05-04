@@ -165,8 +165,8 @@
         </div>
     </div>
    </div>
-   <main class="mt-12">
-        <div class="w-[90%] m-auto">
+   <main class="mt-12 w-[86%] desktop:w-[92%] lg:w-[94%]  m-auto">
+        <div>
             <ul class="flex items-center gap-5 justify-between text-center my-8 mb-10" id="movies">
                 <li class="text-[#D9DADB] text-[30px] max-desktop:text-[26px] max-tablet:text-[24px] font-bold w-full flex items-center desktop:justify-center [text-shadow:0px_0px_14px_#fff]">
                     <span class="cursor-pointer">Siyahı</span>
@@ -181,10 +181,10 @@
                 <li class="text-[20px] cursor-pointer duration-300 text-[#D9DADB]  font-medium opacity-55 ">Cədvəl</li>
             </ul>
         </div>
-        <div class="w-[90%] m-auto mt-10">
-            <div class="flex justify-between gap-7 items-center relative">
+        <div class="flex items-center gap-6 my-3 max-desktop:flex-wrap">
+            <div class="flex items-center gap-6 w-full !pt-2">
                 <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
-                    <div id="dropdown1" onclick="openDD1()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
+                    <div id="dropdown1" onclick="openDD1()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white  transition-colors duration-500 h-[37px] relative">
                       <span class="text-white"><i>Dil</i></span>
                       <svg id="svg1" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                         <path d="M7 10l5 5 5-5z"></path>
@@ -208,7 +208,7 @@
                         <span class="w-full text-white">EN</span>
                       </div>
                     </div>
-                </div>                               
+                </div>             
                 <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
                     <div id="dropdown2" onclick="openDD2()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
                       <span class="text-white"><i>Kinoteatr</i></span>
@@ -237,12 +237,19 @@
                         <span class="w-full text-white">Shahdag</span>
                       </div>
                     </div>
-                  </div>                
+                  </div>    
             </div>
-          </div>
-          
+            <div class="max-desktop:w-full desktop:w-1/2">
+                <div class="flex flex-1 w-full  min-w-[136px]">
+                    <input class="border-b mt-[7px] w-full transition-colors outline-0 duration-500 h-[37px] text-white" type="date" placeholder="Bügün">
+                </div>
+            </div>
+        </div>
+        <div id="films" class="grid desktop:w-[98%] desktop:mx-auto gap-14 max-desktop:gap-8 my-14 max-tablet:grid-cols-1 max-lg:gap-x-3 max-desktop:items-center max-desktop:justify-center max-desktop:grid-cols-2 desktop:grid-cols-3 lg:grid-cols-4"></div>
     </main>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./service/api.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/swiper.js"></script>
 </body>
