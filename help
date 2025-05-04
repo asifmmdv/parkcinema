@@ -1,62 +1,76 @@
-<div class="w-[90%] m-auto mt-10 flex gap-7 flex-1 flex-wrap items-center ">
-            <div class="flex justify-between gap-7 items-center relative">
-                <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
-                    <div id="dropdown1" onclick="openDD1()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
-                      <span class="text-white"><i>Dil</i></span>
-                      <svg id="svg1" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M7 10l5 5 5-5z"></path>
-                      </svg>
-                      <div id="underline1" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
-                    </div> 
-                    <div id="dropdowncont1" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
-                      <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
-                        <span class="w-full text-[rgb(187,186,186)]"><i>Dil</i></span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">AZ</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">TR</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">RU</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">EN</span>
-                      </div>
+const table = document.getElementById("table");
+const data3 = [];
+
+function getFilmDetails2() {
+    fetch(`https://data-pink-nine.vercel.app/detail`)
+        .then(res => res.json())
+        .then(mel => {
+            data3.length = 0;
+            data3.push(...mel);
+            showDetail2();
+        })
+}
+getFilmDetails2();
+
+function showDetail2() {
+    // Create or find tbody
+    let tbody = table.querySelector("tbody");
+    if (!tbody) {
+        tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+    }
+    
+    tbody.innerHTML = ""; // Clear existing rows
+    
+    data3.forEach(item => {
+        // Format date and time
+        const dateObj = new Date(item.date);
+        const formattedDate = dateObj.toLocaleDateString('az-AZ', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+        const formattedTime = item.time || '00:00';
+        
+        // Determine language and subtitle text
+        const languageText = item.language === 'RU' ? 'Rus' : 'Digər';
+        const subtitleText = item.subtitle === 'AZ' ? 'Azərbaycanca altyazı' : 'Altyazı yoxdur';
+        
+        // Create row HTML
+        const rowHTML = `
+        <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+            <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                ${formattedDate}<br>
+                <span class="font-bold">${formattedTime}</span>
+            </td>
+            <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+            <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                <div class="flex justify-center items-center gap-2 max-xxs:leading-none">
+                    <span class="max-xxs:text-[8px] max-xxs:leading-none">${item.theatreTitle} | ${item.hallTitle}</span>
+                    ${item.hallType === 'REGULAR' ? '' : '<img alt="laser" aria-label="LASER" loading="lazy" width="34" height="34" decoding="async" data-nimg="1" class="" src="/images/laser.svg" style="color: transparent;">'}
+                </div>
+            </td>
+            <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                <div class="flex flex-col leading-none gap-1">${item.type.replace('_', '')}</div>
+            </td>
+            <td class="py-4 px-2 max-sm:p-1 text-center">
+                <img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/${item.language === 'RU' ? 'ru-flag.svg' : 'tr-flag.svg'}" style="color: transparent;">
+            </td>
+            <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                <div class="flex items-center justify-center">
+                    <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px] max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center !w-max px-4">
+                        <span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">${subtitleText}</span>
                     </div>
-                </div>                               
-                <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
-                    <div id="dropdown2" onclick="openDD2()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
-                      <span class="text-white"><i>Kinoteatr</i></span>
-                      <svg id="svg2" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                        <path d="M7 10l5 5 5-5z"></path>
-                      </svg>
-                      <div id="underline2" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
-                    </div> 
-                    <div id="dropdowncont2" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
-                      <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
-                        <span class="w-full text-[rgb(187,186,186)]"><i>Kinoteatr</i></span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">Park Bulvar</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">Metro Park</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">Flame Towers</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">Sevinc Mall</span>
-                      </div>
-                      <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                        <span class="w-full text-white">Shahdag</span>
-                      </div>
-                    </div>
-                  </div>                
-            </div>
-            <div class="flex flex-1 w-full min-w-[136px]">
-            <input class="border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] text-white" type="date" placeholder="Bügün">
-            </div>
-        </div>
+                </div>
+            </td>
+            <td class="py-4 px-2 text-end max-sm:p-1">
+                <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/${item.movie.id}?theatreId=${item.theatreId}&movieId=${item.movie.id}&sessionId=${item.id}">
+                    <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                </a>
+            </td>
+        </tr>
+        `;
+        
+        tbody.innerHTML += rowHTML;
+    });
+}

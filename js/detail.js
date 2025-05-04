@@ -13,6 +13,7 @@ function getFilmDetails() {
             showDetail();
         })
 }
+getFilmDetails();
 
 function showDetail() {
     filmDetails.innerHTML = "";
@@ -74,5 +75,52 @@ function showDetail() {
         </div>`;
     });
 }
+const tableBody = document.querySelector("#table tbody");
+const data3 = [];
 
-getFilmDetails();
+function getFilmDetails2() {
+    fetch(`https://data-pink-nine.vercel.app/detail`)
+        .then(res => res.json())
+        .then(mel => {
+            data3.length = 0;
+            data3.push(...mel); 
+            showDetail2();
+        })
+}
+getFilmDetails2();
+
+function showDetail2() {
+    let rowsHTML = "";
+    data3.forEach(item => {
+        rowsHTML += `
+            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">${item.time}</td>
+                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none">
+                        <span class="max-xxs:text-[8px] max-xxs:leading-none">${item.theatreTitle} | ${item.hallTitle}</span>
+                    </div>
+                </td>
+                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                    <div class="flex flex-col leading-none gap-1">${item.type.slice(1)}</div>
+                </td>
+                <td class="py-4 px-2 max-sm:p-1 text-center">
+                    <img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/img/${item.language.toLowerCase()}-flag.svg"">
+                </td>
+                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                    <div class="flex items-center justify-center">
+                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px] max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center !w-max px-4">
+                            <span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">${item.subtitle !== "NONE" ? (item.subtitle === "AZ" ? "AZE<br>sub" : `${item.subtitle}<br>sub`) : "Alt yazı <br> yoxdur"}</span>
+                        </div>
+                    </div>
+                </td>
+                <td class="py-4 px-2 text-end max-sm:p-1">
+                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/298851?theatreId=675aea0a2acad3103ea740db&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0206ea7da51861b1d3a">
+                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                    </a>
+                </td>
+            </tr>
+        `;
+    });
+    tableBody.innerHTML = rowsHTML;
+}

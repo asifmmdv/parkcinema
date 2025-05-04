@@ -1,0 +1,209 @@
+   <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">20:50</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Park Bulvar | Zal: Saloglu</span><img alt="laser" aria-label="LASER" loading="lazy" width="34" height="34" decoding="async" data-nimg="1" class="" src="/images/laser.svg"
+                                        style="color: transparent;"></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/tr-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/298851?theatreId=675aea0a2acad3103ea740db&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0206ea7da51861b1d3a">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">21:00</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Metro Park | Zal: 1</span></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/tr-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/199123?theatreId=675aea102acad3103ea74531&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=68169ff46ea7da51861b196e">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">21:10</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Sevinc Mall | Zal: 1</span></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/tr-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/98391?theatreId=675aea192acad3103ea74e2e&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=68169ff46ea7da51861b1972">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">21:50</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Flame Towers | </span><img alt="imax" aria-label="IMAX" loading="lazy" width="34" height="34" decoding="async" data-nimg="1" class="" src="/images/imax.svg" style="color: transparent;"></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/ru-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/190953?theatreId=675aea152acad3103ea749e6&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=68169ff46ea7da51861b196d">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">22:00</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Park Bulvar | Zal: 5</span></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/ru-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/298858?theatreId=675aea0a2acad3103ea740db&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a00f6ea7da51861b1bb8">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">22:10</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Metro Park | Zal: 2</span><img alt="dolby" aria-label="DOLBY" loading="lazy" width="34" height="34" decoding="async" data-nimg="1" class="" src="/images/dolby.svg" style="color: transparent;"></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/ru-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/199352?theatreId=675aea102acad3103ea74531&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=68169ffe6ea7da51861b1a52">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">22:20</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Sevinc Mall | Zal: 2</span></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/ru-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/98398?theatreId=675aea192acad3103ea74e2e&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0016ea7da51861b1a84">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">23:00</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Flame Towers | Zal: Coca Cola</span></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/ru-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/191524?theatreId=675aea152acad3103ea749e6&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0266ea7da51861b1dba">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-[#D9DADB] bg-[#383838] transition">
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">23:10</td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:hidden"></td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF] max-sm:text-[12px]">
+                                    <div class="flex justify-center items-center gap-2 max-xxs:leading-none"><span class="max-xxs:text-[8px] max-xxs:leading-none">Park Bulvar | Zal: Saloglu</span><img alt="laser" aria-label="LASER" loading="lazy" width="34" height="34" decoding="async" data-nimg="1" class="" src="/images/laser.svg"
+                                        style="color: transparent;"></div>
+                                </td>
+                                <td class="py-4 px-2 text-sm max-sm:p-1 text-[#FFFFFF]">
+                                    <div class="flex flex-col leading-none gap-1">3D</div>
+                                </td>
+                                <td class="py-4 px-2 max-sm:p-1 text-center"><img alt="flag" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" src="/icons/en-flag.svg" style="color: transparent;"></td>
+                                <td class="py-4 px-2 text-sm text-[#FFFFFF] max-sm:p-1">
+                                    <div class="flex items-center justify-center">
+                                        <div class="border border-solid border-[#D9DADB] min-h-[40px] rounded-[10px] flex flex-col gap-1 p-0.5 max-xxs:px-[1px] py-1 min-w-[20px]
+                      max-xxxs:leading-none max-md:leading-[13px] md:leading-[16px] max-w-[100px] justify-center items-center  !w-max px-4"><span class="text-[12px] max-xs:text-[10px] max-xxs:text-[8px] text-wrap whitespace-pre">Altyazı
+        yoxdur</span></div>
+                                    </div>
+                                </td>
+                                <td class="py-4 px-2 text-end max-sm:p-1">
+                                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/298852?theatreId=675aea0a2acad3103ea740db&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0206ea7da51861b1d40">
+                                        <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
+                                    </a>
+                                </td>
+                            </tr>

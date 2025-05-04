@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body class="bg-[rgb(55,55,55)]">
     <header class="flex justify-between items-center duration-200 w-full bg-transparent absolute top-0 px-10 z-[99]">
@@ -65,6 +66,7 @@
             <img class="w-[150px] h-[80px] z-999999" src="../img/logo (1).svg" alt="">
         </a>
    </div>
+   
    <div onclick="openModal()" class="max-desktop:block desktop:hidden">
         <div class="w-14 h-14 rounded-full border border-[#D9DADB] flex items-center justify-center cursor-pointer fixed bottom-8 left-8  bg-[#ff00004a] backdrop-blur-sm z-20">
             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-[#D9DADB] text-[24px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -143,9 +145,120 @@
    </div>
     <main class="mt-30 w-[86%] desktop:w-[92%] lg:w-[94%]  m-auto">
         <div id="filmDetails"></div>
+        <div>
+            <div class="flex items-center gap-8 justify-between max-md:flex-col w-full">
+                <div class="md:max-w-[400px] max-sm:max-w-full max-md:!max-w-[100%] max-md:px-5 max-sm:pl-2">
+                    <div class="flex items-center gap-0 relative">
+                        <div class="text-white flex items-center top-1/2 -left-6 -translate-y-1/2 z-[2] -translate-x-3 absolute swiper-button-lock swiper-button-disabled">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="cursor-pointer text-3xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
+                            </svg>
+                        </div>
+                        <div class="swiper swiper-initialized swiper-horizontal mySwiper swiper-backface-hidden">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms; transform: translate3d(0px, 0px, 0px);">
+                                <div class="swiper-slide swiper-slide-active min-w-[60px]" style="width: 48px; margin-right: 5px;">
+                                    <div class="flex flex-col items-center w-[60px] h-[100px] rounded-[40px] duration-200 cursor-pointer justify-between py-3 bg-[#D9DADB]"><span class="text-[16px] text-black">May</span>
+                                        <div class="rounded-full duration-200 text-white text-[16px] w-[48px] h-[48px] flex justify-center items-center bg-[#353535]">4</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next min-w-[60px]" style="width: 48px; margin-right: 5px;">
+                                    <div class="flex flex-col items-center w-[60px] h-[100px] rounded-[40px] duration-200 cursor-pointer justify-between py-3 bg-[#474747]"><span class="text-[16px] text-[#D9DADB]">May</span>
+                                        <div class="rounded-full duration-200 text-white text-[16px] w-[48px] h-[48px] flex justify-center items-center bg-[#606060]">5</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide min-w-[60px]" style="width: 48px; margin-right: 5px;">
+                                    <div class="flex flex-col items-center w-[60px] h-[100px] rounded-[40px] duration-200 cursor-pointer justify-between py-3 bg-[#474747]"><span class="text-[16px] text-[#D9DADB]">May</span>
+                                        <div class="rounded-full duration-200 text-white text-[16px] w-[48px] h-[48px] flex justify-center items-center bg-[#606060]">6</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide min-w-[60px]" style="width: 48px; margin-right: 5px;">
+                                    <div class="flex flex-col items-center w-[60px] h-[100px] rounded-[40px] duration-200 cursor-pointer justify-between py-3 bg-[#474747]"><span class="text-[16px] text-[#D9DADB]">May</span>
+                                        <div class="rounded-full duration-200 text-white text-[16px] w-[48px] h-[48px] flex justify-center items-center bg-[#606060]">7</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-white absolute top-1/2 -right-4 z-[2] -translate-y-1/2 translate-x-3 swiper-button-lock swiper-button-disabled">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="text-[#D9DADB] text-[32px] cursor-pointer" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-8 w-full max-md:flex-col max-md:gap-3">
+                    <div class="flex items-center gap-8 w-full">
+                        <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
+                            <div id="dropdown1" onclick="openDD1()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white  transition-colors duration-500 h-[37px] relative">
+                              <span class="text-white"><i>Dil</i></span>
+                              <svg id="svg1" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"></path>
+                              </svg>
+                              <div id="underline1" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
+                            </div> 
+                            <div id="dropdowncont1" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
+                              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
+                                <span class="w-full text-[rgb(187,186,186)]"><i>Dil</i></span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">AZ</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">TR</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">RU</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">EN</span>
+                              </div>
+                            </div>
+                        </div>             
+                        <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
+                            <div id="dropdown2" onclick="openDD2()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
+                              <span class="text-white"><i>Kinoteatr</i></span>
+                              <svg id="svg2" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                <path d="M7 10l5 5 5-5z"></path>
+                              </svg>
+                              <div id="underline2" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
+                            </div> 
+                            <div id="dropdowncont2" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
+                              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
+                                <span class="w-full text-[rgb(187,186,186)]"><i>Kinoteatr</i></span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">Park Bulvar</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">Metro Park</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">Flame Towers</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">Sevinc Mall</span>
+                              </div>
+                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
+                                <span class="w-full text-white">Shahdag</span>
+                              </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="w-full " style="opacity: 1;">
+                <div class="MuiTableContainer-root css-kge0eu">
+                    <table  id="table" class="MuiTable-root mt-16 w-full min-h-[300px]  css-1owb465" aria-label="collapsible table">
+                        <tbody class="MuiTableBody-root text-center css-1xnox0e">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="./.service/api.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
 </body>
 </html>

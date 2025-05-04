@@ -493,6 +493,9 @@
   .w-\[96\%\] {
     width: 96%;
   }
+  .w-\[100px\] {
+    width: 100px;
+  }
   .w-\[140px\] {
     width: 140px;
   }
@@ -1287,6 +1290,11 @@
   .max-sm\:\!w-\[60px\] {
     @media (width < 40rem) {
       width: 60px !important;
+    }
+  }
+  .max-sm\:w-\[60px\] {
+    @media (width < 40rem) {
+      width: 60px;
     }
   }
   .max-sm\:w-full {
