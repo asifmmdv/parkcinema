@@ -115,7 +115,7 @@ function showDetail2() {
                     </div>
                 </td>
                 <td class="py-4 px-2 text-end max-sm:p-1">
-                    <a class="md:!w-max inline-block text-end" href="/az/movie/seat-selection/298851?theatreId=675aea0a2acad3103ea740db&amp;movieId=67ef8e906f500c02f5d9181f&amp;sessionId=6816a0206ea7da51861b1d3a">
+                    <a class="md:!w-max inline-block text-end" href="/pages/detail2.html?id=${item.id}">
                         <button class="flex items-center justify-center bg-[#D52B1E] opacity-65 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[36px] px-4 py-2 bg-[#C02020] text-white text-sm rounded hover:bg-[#A81A1A] transition md:!w-[160px] !w-[100px] max-sm:!w-[60px] max-sm:!p-0 max-sm:!text-[12px] max-sm:leading-3">Bilet Al</button>
                     </a>
                 </td>
@@ -124,3 +124,4 @@ function showDetail2() {
     });
     tableBody.innerHTML = rowsHTML;
 }
+

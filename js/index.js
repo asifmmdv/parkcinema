@@ -65,6 +65,7 @@ function getAllFims(){
         data.length = 0
         data.push(...mel)
         showAllFilms()
+        
       })
 }
 getAllFims()
