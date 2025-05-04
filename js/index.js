@@ -74,7 +74,7 @@ function showAllFilms(){
   data.map(item => {
       films.innerHTML += `
          <div class="group">
-              <a target="_self" href="/az/movie/${item.id}">
+              <a href="/pages/detail.html?id=${item.id}">
                   <div class="aspect-[290/480] max-tablet:w-full rounded-[18px] shadow-box relative cursor-pointer flex items-center overflow-hidden">
                       <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#00000000] via-[#0000004E] to-[#000000] z-[10]"></div>
                       <img alt="movie" class="absolute top-0 left-0 object-cover scale-100 group-hover:scale-105 duration-300 z-0 w-full h-full" src="https://new.parkcinema.az/_next/image?url=https%3A%2F%2Fnew.parkcinema.az%2Fapi%2Ffile%2FgetFile%2F${item.image}&w=640&q=75" alt="${item.name}">
