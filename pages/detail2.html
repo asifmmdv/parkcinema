@@ -147,7 +147,17 @@
         <h1 class="text-3xl mb-3 text-white">Oturacaq Seçimi</h1>
         <div id="sessionDetails" class="w-full relative h-[300px] bg-[url('/img/movie-herobg.svg')] bg-cover rounded-xl z-0 overflow-hidden before:absolute before:w-full before:z-[-1] before:h-full before:bg-[#161616d6] ">
         </div>
-        <div id="sessionDetails2" class="md:flex justify-between items-center mt-5">
+        <div class="md:flex justify-between items-center mt-5">
+            <ul class="flex items-center max-md:gap-2 max-md:flex-wrap max-md:justify-center md:gap-8">
+                <li class="flex text-[#D9DADB] items-center gap-2 ">
+                    <div class="w-[18px] h-[18px] rounded-full bg-[#D9DADB]"></div>Mövcuddur</li>
+                <li class="flex text-[#D9DADB] items-center gap-2">
+                    <div class="w-[18px] h-[18px] rounded-full bg-[#000000]"></div>Tutulmuş</li>
+                <li class="flex text-[#D9DADB] items-center gap-2">
+                    <div class="w-[18px] h-[18px] rounded-full bg-[#D52B1E]"></div>Seçilmiş</li>
+            </ul>
+            <ul id="sessionDetails2" class="flex items-center max-md:gap-2 md:gap-8 max-md:flex-wrap max-md:justify-center max-md:text-[14px] max-md:mt-2 text-[#D9DADB]">
+            </ul>
         </div>
     </main>
     <script src="./.service/api.js"></script>

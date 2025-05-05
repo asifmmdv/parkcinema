@@ -11,7 +11,7 @@ function getSessionDetails() {
             data4.length = 0;
             data4.push(session);
             showSessionDetail();
-            showdetails5()
+            showSessionDetail2()
         })
 }
 getSessionDetails();
@@ -48,3 +48,19 @@ function showSessionDetail() {
     });
 }
 
+function showSessionDetail2() {
+    sessionDetails2.innerHTML = ""; 
+    data4.forEach(item => {
+        const discounts = item.price[0]?.discounts
+        discounts.forEach(discount => {
+            sessionDetails2.innerHTML += `
+                <li class="max-md:min-w-max">
+                    ${discount.discountType == "FAMILY" ? "Ailə" :
+                    discount.discountType == "ADULT" ? "Böyük" :
+                    discount.discountType == "DOUBLE" ? "İkili" : ""}
+                    <strong class="font-semibold">${discount.discountValue} azn</strong>
+                </li>
+            `;
+        });
+    });
+}
