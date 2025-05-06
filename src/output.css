@@ -277,6 +277,33 @@
   .col-span-2 {
     grid-column: span 2 / span 2;
   }
+  .container {
+    width: 100%;
+    @media (width >= 420px) {
+      max-width: 420px;
+    }
+    @media (width >= 650px) {
+      max-width: 650px;
+    }
+    @media (width >= 770px) {
+      max-width: 770px;
+    }
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .m-auto {
     margin: auto;
   }
@@ -603,6 +630,9 @@
   }
   .flex-1 {
     flex: 1;
+  }
+  .origin-center {
+    transform-origin: center;
   }
   .origin-top-left {
     transform-origin: top left;

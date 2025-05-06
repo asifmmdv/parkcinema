@@ -160,25 +160,40 @@
             </ul>
         </div>
         <div class="my-5 mt-12">
-            <div class="bg-[#4D4D4D] rounded-xl max-lg:py-5 lg:py-10 relative">
-                    <div id="cinemaContainer" class="w-full overflow-x-auto flex overflow-y-auto h-[800px]  flex-col gap-2"></div>
-                    <div class="w-full flex items-center justify-center flex-col text-[#d9dadb] mt-6">
-                        <span class="text-2xl">Ekran</span>
-                        <img alt="screen" loading="lazy" width="400" height="400" decoding="async" data-nimg="1" class="md:w-3/4 object-cover" src="/img/screen.svg" style="color: transparent;">
+            <div class="bg-[#4D4D4D] rounded-xl max-lg:py-5 lg:py-10 relative overflow-hidden">
+  
+                <!-- Scrollable Container -->
+                <div class="w-full h-[800px] overflow-auto">
+                  
+                  <!-- Scalable Content -->
+                  <div id="zoomWrapper" class="transform transition-transform origin-center">
+                    <div id="cinemaContainer" class="w-full flex flex-col gap-2">
+                      <!-- Your cinema seats go here -->
                     </div>
-                <div class="w-[70px] h-[120px] max-xxxs:h-[75px] absolute top-0 right-0 flex flex-col items-center justify-center gap-3 max-xxxs:gap-1.5">
-                    <button class="bg-[#D9DADB] md:p-1.5 flex items-center justify-center rounded max-xxxs:w-[20px] max-xxxs:h-[20px]">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-[22px] max-xxxs:text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"></path>
-                        </svg>
-                    </button>
-                    <button class="bg-[#D9DADB] md:p-1.5 flex items-center justify-center rounded max-xxxs:w-[20px] max-xxxs:h-[20px]">
-                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="text-[22px] max-xxxs:text-[12px]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5 11h14v2H5z"></path>
-                        </svg>
-                    </button>
+                  </div>
                 </div>
-            </div>
+              
+                <!-- Screen display -->
+                <div class="w-full flex items-center justify-center flex-col text-[#d9dadb] mt-6">
+                  <span class="text-2xl">Ekran</span>
+                  <img alt="screen" loading="lazy" width="400" height="400" decoding="async"
+                       class="md:w-3/4 object-cover" src="/img/screen.svg" style="color: transparent;">
+                </div>
+              
+                <!-- Zoom Buttons -->
+                <div class="w-[70px] h-[120px] max-xxxs:h-[75px] absolute top-0 right-0 flex flex-col items-center justify-center gap-3 max-xxxs:gap-1.5">
+                  <button id="zoomIn" class="bg-[#D9DADB] md:p-1.5 flex items-center justify-center rounded max-xxxs:w-[20px] max-xxxs:h-[20px]">
+                    <svg viewBox="0 0 24 24" class="text-[22px] max-xxxs:text-[12px]" width="1em" height="1em">
+                      <path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z" />
+                    </svg>
+                  </button>
+                  <button id="zoomOut" class="bg-[#D9DADB] md:p-1.5 flex items-center justify-center rounded max-xxxs:w-[20px] max-xxxs:h-[20px]">
+                    <svg viewBox="0 0 24 24" class="text-[22px] max-xxxs:text-[12px]" width="1em" height="1em">
+                      <path d="M5 11h14v2H5z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             <div class="flex justify-between mt-6 max-md:flex-col">
                 <div class="flex flex-col gap-3 max-md:px-4 max-md:mb-4">
                     <div class="flex text-[#D9DADB] flex-wrap items-center gap-4 "></div>
