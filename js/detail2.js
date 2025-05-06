@@ -75,7 +75,7 @@ for (let i = 0; i < rows; i++) {
     let rowHTML = '<div class="flex gap-1 items-center w-full">';
 
     rowHTML += `
-        <span class="min-w-8 min-h-8 w-10 h-10 text-white  font-bold flex items-center justify-center desktop:ml-30 rounded-sm mr-20 text-xl">
+        <span class="min-w-8 min-h-8 w-10 h-10 text-white  font-bold flex items-center justify-center max-desktop:ml-[-160px] desktop:ml-30 rounded-sm mr-20 text-xl">
             ${rows - i}
         </span>`;
 
@@ -144,32 +144,38 @@ for (let i = 0; i < rows; i++) {
 
 document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
 
-  const zoomWrapper = document.getElementById("zoomWrapper");
-  const zoomInBtn = document.getElementById("zoomIn");
-  const zoomOutBtn = document.getElementById("zoomOut");
+const zoomWrapper = document.getElementById("zoomWrapper");
+const zoomInBtn = document.getElementById("zoomIn");
+const zoomOutBtn = document.getElementById("zoomOut");
 
-  let scale = 1;
-  const scaleStep = 0.1;
-  const maxScale = 2;
-  const minScale = 0.5;
+let scale = 1;
+const scaleStep = 0.1;
+const maxScale = 2;
+const minScale = 0.5;
 
-  function applyZoom() {
-    zoomWrapper.style.transform = `scale(${scale})`;
+// Check for screen width and apply scale 0.2 if width <= 770
+if (window.innerWidth <= 770) {
+  scale = 0.5;
+  applyZoom();
+}
+
+function applyZoom() {
+  zoomWrapper.style.transform = `scale(${scale})`;
+}
+
+zoomInBtn.onclick = function () {
+  if (scale < maxScale) {
+    scale += scaleStep;
+    applyZoom();
   }
+};
 
-  zoomInBtn.onclick = function () {
-    if (scale < maxScale) {
-      scale += scaleStep;
-      applyZoom();
-    }
-  };
-
-  zoomOutBtn.onclick = function () {
-    if (scale > minScale) {
-      scale -= scaleStep;
-      applyZoom();
-    }
-  };
+zoomOutBtn.onclick = function () {
+  if (scale > minScale) {
+    scale -= scaleStep;
+    applyZoom();
+  }
+};
 
 
 

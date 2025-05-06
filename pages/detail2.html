@@ -161,26 +161,17 @@
         </div>
         <div class="my-5 mt-12">
             <div class="bg-[#4D4D4D] rounded-xl max-lg:py-5 lg:py-10 relative overflow-hidden">
-  
-                <!-- Scrollable Container -->
-                <div class="w-full h-[800px] overflow-auto">
-                  
-                  <!-- Scalable Content -->
+                <div class="w-full max-desktop:[500px] desktop:h-[800px]  overflow-auto">       
                   <div id="zoomWrapper" class="transform transition-transform origin-center">
                     <div id="cinemaContainer" class="w-full flex flex-col gap-2">
-                      <!-- Your cinema seats go here -->
                     </div>
                   </div>
                 </div>
-              
-                <!-- Screen display -->
                 <div class="w-full flex items-center justify-center flex-col text-[#d9dadb] mt-6">
                   <span class="text-2xl">Ekran</span>
                   <img alt="screen" loading="lazy" width="400" height="400" decoding="async"
                        class="md:w-3/4 object-cover" src="/img/screen.svg" style="color: transparent;">
                 </div>
-              
-                <!-- Zoom Buttons -->
                 <div class="w-[70px] h-[120px] max-xxxs:h-[75px] absolute top-0 right-0 flex flex-col items-center justify-center gap-3 max-xxxs:gap-1.5">
                   <button id="zoomIn" class="bg-[#D9DADB] md:p-1.5 flex items-center justify-center rounded max-xxxs:w-[20px] max-xxxs:h-[20px]">
                     <svg viewBox="0 0 24 24" class="text-[22px] max-xxxs:text-[12px]" width="1em" height="1em">

@@ -1250,6 +1250,41 @@
       margin-top: calc(var(--spacing) * 4);
     }
   }
+  .max-desktop\:ml-0 {
+    @media (width < 770px) {
+      margin-left: calc(var(--spacing) * 0);
+    }
+  }
+  .max-desktop\:ml-\[-120px\] {
+    @media (width < 770px) {
+      margin-left: -120px;
+    }
+  }
+  .max-desktop\:ml-\[-130px\] {
+    @media (width < 770px) {
+      margin-left: -130px;
+    }
+  }
+  .max-desktop\:ml-\[-150px\] {
+    @media (width < 770px) {
+      margin-left: -150px;
+    }
+  }
+  .max-desktop\:ml-\[-160px\] {
+    @media (width < 770px) {
+      margin-left: -160px;
+    }
+  }
+  .max-desktop\:ml-\[-200px\] {
+    @media (width < 770px) {
+      margin-left: -200px;
+    }
+  }
+  .max-desktop\:ml-\[-300px\] {
+    @media (width < 770px) {
+      margin-left: -300px;
+    }
+  }
   .max-desktop\:block {
     @media (width < 770px) {
       display: block;
@@ -1570,6 +1605,11 @@
   .desktop\:hidden {
     @media (width >= 770px) {
       display: none;
+    }
+  }
+  .desktop\:h-\[800px\] {
+    @media (width >= 770px) {
+      height: 800px;
     }
   }
   .desktop\:min-h-\[600px\] {
@@ -1926,63 +1966,6 @@ body::-webkit-scrollbar {
 @property --tw-content {
   syntax: "*";
   initial-value: "";
-  inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
-      --tw-border-style: solid;
-      --tw-gradient-position: initial;
-      --tw-gradient-from: #0000;
-      --tw-gradient-via: #0000;
-      --tw-gradient-to: #0000;
-      --tw-gradient-stops: initial;
-      --tw-gradient-via-stops: initial;
-      --tw-gradient-from-position: 0%;
-      --tw-gradient-via-position: 50%;
-      --tw-gradient-to-position: 100%;
-      --tw-leading: initial;
-      --tw-font-weight: initial;
-      --tw-outline-style: solid;
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
-      --tw-backdrop-blur: initial;
-      --tw-backdrop-brightness: initial;
-      --tw-backdrop-contrast: initial;
-      --tw-backdrop-grayscale: initial;
-      --tw-backdrop-hue-rotate: initial;
-      --tw-backdrop-invert: initial;
-      --tw-backdrop-opacity: initial;
-      --tw-backdrop-saturate: initial;
-      --tw-backdrop-sepia: initial;
-      --tw-duration: initial;
-      --tw-content: "";
-    }
-  }
-}
-l-value: "";
   inherits: false;
 }
 @layer properties {
