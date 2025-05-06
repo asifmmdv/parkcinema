@@ -64,3 +64,77 @@ function showSessionDetail2() {
         });
     });
 }
+
+
+const rows = 12;
+const seatsPerRow = 17;
+
+let cinemaHTML = '';
+
+for (let i = 0; i < rows; i++) {
+    let rowHTML = '<div class="flex gap-1 items-center">';
+
+    rowHTML += `
+        <span class="w-8 h-8 text-white font-bold flex items-center justify-center bg-black rounded-sm mr-8">
+            ${rows - i}
+        </span>`;
+
+    if (i === 0) {
+        for (let j = 0; j < seatsPerRow; j++) {
+            rowHTML += `
+                <span class="w-8 h-8 bg-gray-300 border border-gray-600 rounded-sm flex items-center justify-center cursor-pointer hover:bg-yellow-400">
+                    ${j + 1}
+                </span>`;
+        }
+    } else if (i >= 1 && i <= 5) {
+        let seatCount = 1;
+        for (let j = 0; j < seatsPerRow; j++) {
+            if (j >= seatsPerRow - 2) {
+                rowHTML += '<span class="w-8 h-8 opacity-0"></span>';
+            } else if (j < 2) {
+                rowHTML += `
+                    <span class="w-8 h-8 bg-gray-300 border border-gray-600 rounded-sm flex items-center justify-center cursor-pointer hover:bg-yellow-400">
+                        ${seatCount++}
+                    </span>`;
+            } else if (j >= 2 && j < 4) {
+                rowHTML += '<span class="w-8 h-8 opacity-0"></span>';
+            } else {
+                rowHTML += `
+                    <span class="w-8 h-8 bg-gray-300 border border-gray-600 rounded-sm flex items-center justify-center cursor-pointer hover:bg-yellow-400">
+                        ${seatCount++}
+                    </span>`;
+            }
+        }
+    } else if (i >= 6 && i <= 10) {
+        let seatCount = 1;
+        for (let j = 0; j < seatsPerRow; j++) {
+            if (j >= seatsPerRow - 2) {
+                rowHTML += '<span class="w-8 h-8 opacity-0"></span>';
+            } else if (j < 4) {
+                rowHTML += '<span class="w-8 h-8 opacity-0"></span>';
+            } else {
+                rowHTML += `
+                    <span class="w-8 h-8 bg-gray-300 border border-gray-600 rounded-sm flex items-center justify-center cursor-pointer hover:bg-yellow-400">
+                        ${seatCount++}
+                    </span>`;
+            }
+        }
+    } else if (i === 11) {
+        let seatCount = 2;
+        for (let j = 0; j < seatsPerRow; j++) {
+            if (j < 5 || j >= seatsPerRow - 3) {
+                rowHTML += '<span class="w-8 h-8 opacity-0"></span>';
+            } else {
+                rowHTML += `
+                    <span class="w-8 h-8 bg-gray-300 border border-gray-600 rounded-sm flex items-center justify-center cursor-pointer hover:bg-yellow-400">
+                        ${seatCount++}
+                    </span>`;
+            }
+        }
+    }
+
+    rowHTML += '</div>';
+    cinemaHTML += rowHTML;
+}
+
+document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
