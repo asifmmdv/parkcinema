@@ -144,7 +144,6 @@ for (let i = 0; i < rows; i++) {
 
 document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
 
-
   const zoomWrapper = document.getElementById("zoomWrapper");
   const zoomInBtn = document.getElementById("zoomIn");
   const zoomOutBtn = document.getElementById("zoomOut");
@@ -158,17 +157,19 @@ document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
     zoomWrapper.style.transform = `scale(${scale})`;
   }
 
-  zoomInBtn.addEventListener("click", () => {
+  zoomInBtn.onclick = function () {
     if (scale < maxScale) {
       scale += scaleStep;
       applyZoom();
     }
-  });
+  };
 
-  zoomOutBtn.addEventListener("click", () => {
+  zoomOutBtn.onclick = function () {
     if (scale > minScale) {
       scale -= scaleStep;
       applyZoom();
     }
-  });
+  };
+
+
 
