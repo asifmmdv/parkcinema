@@ -145,7 +145,6 @@ for (let i = 0; i < rows; i++) {
 document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
 
 const container = document.getElementById('cinemaContainer');
-const scrollZone = document.getElementById('cinemaScrollZone');
 const zoomInBtn = document.getElementById('zoomInBtn');
 const zoomOutBtn = document.getElementById('zoomOutBtn');
 
@@ -156,36 +155,32 @@ const maxScale = 1.5;
 
 function applyZoom() {
   container.style.transform = `scale(${scale})`;
-  
-  if (window.innerWidth <= 770 && scale > 0.5 || window.innerWidth > 771) {
-    scrollZone.style.overflowY = 'auto';
-  } else {
-    scrollZone.style.overflowY = 'hidden';
-  }
 }
 
 function checkResponsiveZoom() {
   if (window.innerWidth <= 770) {
     scale = 0.5;
+    applyZoom();
   } else {
-    scale = 1;
+    scale = 1; 
+    applyZoom();
   }
-  applyZoom();
 }
 
-zoomInBtn.onclick = function () {
+zoomInBtn.onclick = function() {
   if (scale < maxScale) {
-    scale = Math.min(scale + step, maxScale);
+    scale += step;
     applyZoom();
   }
 };
 
-zoomOutBtn.onclick = function () {
+zoomOutBtn.onclick = function() {
   if (scale > minScale) {
-    scale = Math.max(scale - step, minScale);
+    scale -= step;
     applyZoom();
   }
 };
 
 checkResponsiveZoom();
+
 window.onresize = checkResponsiveZoom;
