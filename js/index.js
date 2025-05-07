@@ -22,10 +22,22 @@ function openFlags(){
 }
 
 let flag1 = true;
+let flag2 = true;
+
 function openDD1() {
   const dropdowncont1 = document.getElementById('dropdowncont1');
   const svg1 = document.getElementById('svg1');
   const underline1 = document.getElementById('underline1');
+  const dropdowncont2 = document.getElementById('dropdowncont2');
+  const svg2 = document.getElementById('svg2');
+  const underline2 = document.getElementById('underline2');
+
+  if (!flag2) {
+    dropdowncont2.classList.add('hidden');
+    svg2.classList.remove('rotate-180');
+    underline2.classList.remove('w-full');
+    flag2 = true;
+  }
 
   dropdowncont1.classList.toggle('hidden');
   flag1 = !flag1;
@@ -38,11 +50,21 @@ function openDD1() {
     underline1.classList.remove('w-full');
   }
 }
-let flag2 = true;
+
 function openDD2() {
   const dropdowncont2 = document.getElementById('dropdowncont2');
   const svg2 = document.getElementById('svg2');
   const underline2 = document.getElementById('underline2');
+  const dropdowncont1 = document.getElementById('dropdowncont1');
+  const svg1 = document.getElementById('svg1');
+  const underline1 = document.getElementById('underline1');
+
+  if (!flag1) {
+    dropdowncont1.classList.add('hidden');
+    svg1.classList.remove('rotate-180');
+    underline1.classList.remove('w-full');
+    flag1 = true;
+  }
 
   dropdowncont2.classList.toggle('hidden');
   flag2 = !flag2;
@@ -55,6 +77,7 @@ function openDD2() {
     underline2.classList.remove('w-full');
   }
 }
+
 
 const data = []
 const films = document.getElementById('films')
