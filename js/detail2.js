@@ -189,7 +189,11 @@ function selectSeat(e, el, type) {
     }
 
     updateSeatSummary();
+
+    // Close the seat menu after selection
+    toggleSeatMenu(e, seatDiv);
 }
+
 
 function updateSeatSummary() {
     seatNumber.innerHTML = selectedSeats
