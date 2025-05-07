@@ -1569,6 +1569,21 @@
       margin-right: calc(var(--spacing) * 50);
     }
   }
+  .desktop\:mr-60 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 60);
+    }
+  }
+  .desktop\:mr-70 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 70);
+    }
+  }
+  .desktop\:mr-80 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 80);
+    }
+  }
   .desktop\:ml-35 {
     @media (width >= 770px) {
       margin-left: calc(var(--spacing) * 35);
@@ -1673,6 +1688,11 @@
     @media (width >= 48rem) {
       --tw-leading: 16px;
       line-height: 16px;
+    }
+  }
+  .lg\:mr-80 {
+    @media (width >= 64rem) {
+      margin-right: calc(var(--spacing) * 80);
     }
   }
   .lg\:flex {
