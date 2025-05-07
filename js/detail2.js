@@ -2,7 +2,11 @@ const urlParams = new URLSearchParams(window.location.search);
 const sessionId = urlParams.get("id");
 const sessionDetails = document.getElementById("sessionDetails");
 const sessionDetails2 = document.getElementById("sessionDetails2");
+const seatNumber = document.getElementById("seatNumber");
+const total = document.getElementById("total");
+
 const data4 = [];
+const selectedSeats = []; // Store selected seat info
 
 function getSessionDetails() {
     fetch(`https://data-pink-nine.vercel.app/detail/${sessionId}`)
@@ -70,15 +74,16 @@ const rows = 12;
 const seatsPerRow = 17;
 let cinemaHTML = '';
 
-function createSeat(seatCount) {
+function createSeat(seatCount, rowNum) {
     return `
         <div class="seat-container min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
             bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300 relative"
+            data-seat="${seatCount}" data-row="${rowNum}"
             onclick="toggleSeatMenu(event, this)">
             ${seatCount}
             <div class="seat-menu absolute duration-200 text-black bg-[#FFFFFFCC] dark:bg-[#FFFFFFCC] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col gap-4 opacity-0 invisible z-10 top-full mt-1">
-                <p class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white !hidden">Ailə</p>
-                <p class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white">Böyük</p>
+                <p onclick="selectSeat(event, this, 'FAMILY')" class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white">Ailə</p>
+                <p onclick="selectSeat(event, this, 'ADULT')" class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white">Böyük</p>
             </div>
         </div>
     `;
@@ -92,7 +97,7 @@ for (let i = 0; i < rows; i++) {
 
     if (i === 0) {
         for (let j = 0; j < seatsPerRow; j++) {
-            rowHTML += createSeat(j + 1);
+            rowHTML += createSeat(j + 1, rows - i);
         }
     } else if (i >= 1 && i <= 5) {
         let seatCount = 1;
@@ -100,7 +105,7 @@ for (let i = 0; i < rows; i++) {
             if (j >= seatsPerRow - 2 || (j >= 2 && j < 4)) {
                 rowHTML += `<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>`;
             } else {
-                rowHTML += createSeat(seatCount++);
+                rowHTML += createSeat(seatCount++, rows - i);
             }
         }
     } else if (i >= 6 && i <= 10) {
@@ -109,7 +114,7 @@ for (let i = 0; i < rows; i++) {
             if (j < 4 || j >= seatsPerRow - 2) {
                 rowHTML += `<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>`;
             } else {
-                rowHTML += createSeat(seatCount++);
+                rowHTML += createSeat(seatCount++, rows - i);
             }
         }
     } else if (i === 11) {
@@ -118,7 +123,7 @@ for (let i = 0; i < rows; i++) {
             if (j < 5 || j >= seatsPerRow - 3) {
                 rowHTML += `<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>`;
             } else {
-                rowHTML += createSeat(seatCount++);
+                rowHTML += createSeat(seatCount++, rows - i);
             }
         }
     }
@@ -152,6 +157,48 @@ document.onclick = function () {
         menu.classList.remove('opacity-100', 'visible');
     });
 };
+
+function selectSeat(e, el, type) {
+    e.stopPropagation();
+    const seatDiv = el.closest('.seat-container');
+    const seat = seatDiv.dataset.seat;
+    const row = seatDiv.dataset.row;
+
+    const seatIndex = selectedSeats.findIndex(s => s.seat === seat && s.row === row);
+
+    if (seatIndex > -1) {
+        // Seat is already selected — remove it
+        selectedSeats.splice(seatIndex, 1);
+        seatDiv.classList.remove('bg-red-400');
+        seatDiv.classList.add('hover:bg-gray-300');  // Re-enable hover on deselect
+    } else {
+        // Seat is not selected — add it
+        const discounts = data4[0].price[0].discounts;
+        const discount = discounts.find(d => d.discountType === type);
+        const label = type === 'FAMILY' ? 'Ailə' : type === 'ADULT' ? 'Böyük' : 'N/A';
+
+        selectedSeats.push({
+            seat,
+            row,
+            label,
+            price: discount?.discountValue || 0
+        });
+
+        seatDiv.classList.add('bg-red-400');
+        seatDiv.classList.remove('hover:bg-gray-300');  // Disable hover when selected
+    }
+
+    updateSeatSummary();
+}
+
+function updateSeatSummary() {
+    seatNumber.innerHTML = selectedSeats
+        .map(s => `Sıra ${s.row}, Yer ${s.seat} (${s.label})`)
+        .join("&nbsp;&nbsp;&nbsp;&nbsp;");
+    const sum = selectedSeats.reduce((acc, s) => acc + s.price, 0);
+    total.innerHTML = `Ümumi: ${sum} azn`;
+}
+
 
 
 const container = document.getElementById('cinemaContainer');
@@ -194,9 +241,6 @@ zoomOutBtn.onclick = function() {
 checkResponsiveZoom();
 
 window.onresize = checkResponsiveZoom;
-
-
-
 
 
 

@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-red-600: oklch(57.7% 0.245 27.325);
     --color-orange-400: oklch(75% 0.183 55.934);
@@ -615,9 +616,6 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
-  .cursor-not-allowed {
-    cursor: not-allowed;
-  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -626,9 +624,6 @@
   }
   .flex-col {
     flex-direction: column;
-  }
-  .flex-row {
-    flex-direction: row;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -801,15 +796,6 @@
   .bg-\[\#ff00004a\] {
     background-color: #ff00004a;
   }
-  .bg-\[\#ffffff7e\] {
-    background-color: #ffffff7e;
-  }
-  .bg-\[\#ffffff35\] {
-    background-color: #ffffff35;
-  }
-  .bg-\[\#ffffff71\] {
-    background-color: #ffffff71;
-  }
   .bg-\[grey\] {
     background-color: grey;
   }
@@ -822,29 +808,11 @@
   .bg-\[rgba\(55\,55\,55\,0\.70\)\] {
     background-color: rgba(55,55,55,0.70);
   }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
-  }
-  .bg-gray-500 {
-    background-color: var(--color-gray-500);
-  }
-  .bg-green-400 {
-    background-color: var(--color-green-400);
-  }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
-  }
-  .bg-orange-400 {
-    background-color: var(--color-orange-400);
-  }
-  .bg-orange-500 {
-    background-color: var(--color-orange-500);
+  .bg-red-400 {
+    background-color: var(--color-red-400);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
-  }
-  .bg-red-600 {
-    background-color: var(--color-red-600);
   }
   .bg-transparent {
     background-color: transparent;
@@ -1062,9 +1030,6 @@
   }
   .text-\[\#d9dadb\] {
     color: #d9dadb;
-  }
-  .text-\[grey\] {
-    color: grey;
   }
   .text-\[rgb\(187\,186\,186\)\] {
     color: rgb(187,186,186);
