@@ -376,9 +376,6 @@
   .mb-1 {
     margin-bottom: calc(var(--spacing) * 1);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
@@ -429,9 +426,6 @@
   }
   .h-\[3px\] {
     height: 3px;
-  }
-  .h-\[6px\] {
-    height: 6px;
   }
   .h-\[18px\] {
     height: 18px;
@@ -807,9 +801,6 @@
   .bg-\[\#4D4D4D\] {
     background-color: #4D4D4D;
   }
-  .bg-\[\#6c6c6c\] {
-    background-color: #6c6c6c;
-  }
   .bg-\[\#00000099\] {
     background-color: #00000099;
   }
@@ -1089,9 +1080,6 @@
   }
   .text-\[\#353535\] {
     color: #353535;
-  }
-  .text-\[\#797979\] {
-    color: #797979;
   }
   .text-\[\#D9DADB\] {
     color: #D9DADB;
@@ -1960,6 +1948,23 @@ body::-webkit-scrollbar {
   font-size: 14px;
   color: #797979;
   margin-bottom: 5px;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+}
+.loader img {
+  width: 100vw;
+  height: 100vh;
 }
 @property --tw-translate-x {
   syntax: "*";
