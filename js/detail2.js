@@ -115,7 +115,6 @@ function toggleSeatMenu(e, seatElement) {
         if (!seatElement.contains(menu)) {
             menu.classList.add('opacity-0', 'invisible');
             menu.classList.remove('opacity-100', 'visible');
-            menu.closest('.seat-container').classList.remove('bg-orange-500', 'hover:bg-gray-300');
         }
     });
 
@@ -124,14 +123,6 @@ function toggleSeatMenu(e, seatElement) {
     menu.classList.toggle('invisible');
     menu.classList.toggle('opacity-100');
     menu.classList.toggle('visible');
-
-    if (menu.classList.contains('opacity-100')) {
-        seatElement.classList.add('bg-orange-500');
-        seatElement.classList.remove('hover:bg-gray-300');
-    } else {
-        seatElement.classList.remove('bg-orange-500');
-        seatElement.classList.add('hover:bg-gray-300');
-    }
 
     e.stopPropagation();
 }
@@ -162,9 +153,6 @@ function selectSeatType(event, typeName, price) {
     updateTotalPrice();
     
     // Toggle the seat's background color based on selection
-    seatElement.classList.toggle('bg-red-500', seatIndex === -1);
-    seatElement.classList.toggle('bg-[#C7C7C7]', seatIndex !== -1);
-    
     // Hide the menu after selection
     const menu = seatElement.querySelector('.seat-menu');
     menu.classList.add('opacity-0', 'invisible');
@@ -175,7 +163,7 @@ function selectSeatType(event, typeName, price) {
 
 function updateSeatDetails() {
     seatNumber.innerHTML = ""; // Clear the seat number display
-    const seatDetails = selectedSeats.map(seat => `Sıra: ${seat.rowNum}, Yer: ${seat.seatNum}`).join('  ');
+    const seatDetails = selectedSeats.map(seat => `Sıra: ${seat.rowNum}, Yer: ${seat.seatNum}`).join('&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
     seatNumber.innerHTML = seatDetails;
 }
 
