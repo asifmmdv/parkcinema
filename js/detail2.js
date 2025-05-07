@@ -6,7 +6,7 @@ const seatNumber = document.getElementById("seatNumber");
 const total = document.getElementById("total");
 
 const data4 = [];
-const selectedSeats = []; // Store selected seat info
+const selectedSeats = [];
 
 function getSessionDetails() {
     fetch(`https://data-pink-nine.vercel.app/detail/${sessionId}`)
@@ -167,12 +167,19 @@ function selectSeat(e, el, type) {
     const seatIndex = selectedSeats.findIndex(s => s.seat === seat && s.row === row);
 
     if (seatIndex > -1) {
-        // Seat is already selected — remove it
         selectedSeats.splice(seatIndex, 1);
         seatDiv.classList.remove('bg-red-400');
-        seatDiv.classList.add('hover:bg-gray-300');  // Re-enable hover on deselect
+        seatDiv.classList.add('hover:bg-gray-300');
     } else {
-        // Seat is not selected — add it
+        if (type === 'FAMILY') {
+            const familyCount = selectedSeats.filter(s => s.label === 'Ailə').length;
+            if (familyCount >= 4) {
+                alert("Maksimum 4 Ailə bileti seçilə bilər.");
+                toggleSeatMenu(e, seatDiv); 
+                return;
+            }
+        }
+
         const discounts = data4[0].price[0].discounts;
         const discount = discounts.find(d => d.discountType === type);
         const label = type === 'FAMILY' ? 'Ailə' : type === 'ADULT' ? 'Böyük' : 'N/A';
@@ -185,12 +192,10 @@ function selectSeat(e, el, type) {
         });
 
         seatDiv.classList.add('bg-red-400');
-        seatDiv.classList.remove('hover:bg-gray-300');  // Disable hover when selected
+        seatDiv.classList.remove('hover:bg-gray-300');
     }
 
     updateSeatSummary();
-
-    // Close the seat menu after selection
     toggleSeatMenu(e, seatDiv);
 }
 
@@ -202,8 +207,6 @@ function updateSeatSummary() {
     const sum = selectedSeats.reduce((acc, s) => acc + s.price, 0);
     total.innerHTML = `Ümumi: ${sum} azn`;
 }
-
-
 
 const container = document.getElementById('cinemaContainer');
 const zoomInBtn = document.getElementById('zoomInBtn');
@@ -243,8 +246,28 @@ zoomOutBtn.onclick = function() {
 };
 
 checkResponsiveZoom();
-
 window.onresize = checkResponsiveZoom;
 
+const buyTicketBtn = document.getElementById("buyTicketBtn");
+if (buyTicketBtn) {
+    buyTicketBtn.addEventListener("click", () => {
+        if (selectedSeats.length === 0) {
+            alert("Zəhmət olmasa ən azı bir yer seçin.");
+            return;
+        }
 
+        const ticketInfo = {
+            movie: data4[0].movie.name,
+            time: data4[0].time,
+            date: "07.05.2025",
+            theatre: data4[0].theatreTitle,
+            hall: data4[0].hallTitle,
+            seats: selectedSeats,
+            total: selectedSeats.reduce((acc, s) => acc + s.price, 0)
+        };
+
+        localStorage.setItem("ticketData", JSON.stringify(ticketInfo));
+        window.location.href = "detail3.html";
+    });
+}
 

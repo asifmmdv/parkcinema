@@ -143,95 +143,52 @@
         </div>
     </div>
    </div>
-    <main class="mt-10 desktop:mt-30 w-[86%] desktop:w-[92%] lg:w-[94%]  m-auto">
-        <div id="filmDetails"></div>
-        <div>
-            <div class="flex items-center gap-8 justify-between max-md:flex-col w-full">
-                <div class="md:max-w-[400px] max-sm:max-w-full max-md:!max-w-[100%] max-md:px-5 max-sm:pl-2">
-                    <div class="flex items-center gap-0 relative">
-                        <div class="text-white flex items-center top-1/2 -left-6 -translate-y-1/2 z-[2] -translate-x-3 absolute">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="cursor-pointer text-3xl" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"></path>
-                            </svg>
-                        </div>
-                        <div class="swiper swiper-initialized swiper-horizontal mySwiper swiper-backface-hidden">
-                            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-405px, 0px, 0px); transition-delay: 0ms;">
-                               
-                            </div>
-                        </div>
-                        <div class="text-white absolute top-1/2 -right-4 z-[2] -translate-y-1/2 translate-x-3 swiper-button-disabled">
-                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 320 512" class="text-[#D9DADB] text-[32px] cursor-pointer" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex items-center gap-8 w-full max-md:flex-col max-md:gap-3">
-                    <div class="flex items-center gap-8 w-full">
-                        <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
-                            <div id="dropdown1" onclick="openDD1()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white  transition-colors duration-500 h-[37px] relative">
-                              <span class="text-white"><i>Dil</i></span>
-                              <svg id="svg1" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M7 10l5 5 5-5z"></path>
-                              </svg>
-                              <div id="underline1" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
-                            </div> 
-                            <div id="dropdowncont1" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
-                              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
-                                <span class="w-full text-[rgb(187,186,186)]"><i>Dil</i></span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">AZ</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">TR</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">RU</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">EN</span>
-                              </div>
-                            </div>
-                        </div>             
-                        <div class="flex flex-col flex-1 w-full min-w-[136px] relative">
-                            <div id="dropdown2" onclick="openDD2()" class="flex justify-center items-center border-b border-b-[#e5e7eb] hover:border-b-white transition-colors duration-500 h-[37px] relative">
-                              <span class="text-white"><i>Kinoteatr</i></span>
-                              <svg id="svg2" class="absolute duration-100 right-0 w-[24px] h-[24px] fill-white" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                <path d="M7 10l5 5 5-5z"></path>
-                              </svg>
-                              <div id="underline2" class="absolute top-9 left-1/2 h-[2px] w-0 bg-red-500 transition-all duration-500 transform -translate-x-1/2"></div>
-                            </div> 
-                            <div id="dropdowncont2" class="flex flex-col w-full py-1 bg-[#928F8F] hidden rounded-sm absolute top-[39px] left-0 z-[999]">
-                              <div class="px-[16px] bg-[rgba(25,118,210,0.08)] flex items-center min-h-[48px]">
-                                <span class="w-full text-[rgb(187,186,186)]"><i>Kinoteatr</i></span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">Park Bulvar</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">Metro Park</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">Flame Towers</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">Sevinc Mall</span>
-                              </div>
-                              <div class="px-[16px] hover:bg-[rgb(140,136,137)] flex items-center min-h-[48px]">
-                                <span class="w-full text-white">Shahdag</span>
-                              </div>
-                            </div>
-                        </div> 
-                    </div>
+    <main class="mt-10 w-[94%] mx-auto desktop:mt-30">
+        <h1 class="text-3xl text-[#D9DADB] font-medium">Ödəniş</h1>
+        <div class="desktop:min-h-[70vh]">
+            <div>
+                <div class="flex justify-end"><span class="timer" id="timer">2:13</span></div>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar" style="width: 100%"></div>
                 </div>
             </div>
-            <div class="w-full">
-                <div>
-                    <table id="table" class="mt-16 w-full min-h-[300px]">
-                        <tbody class="text-center">
-                        </tbody>
-                    </table>
+            <div class="grid grid-cols-2 max-desktop:flex max-desktop:flex-col-reverse max-desktop:gap-10 justify-between my-4 mt-8">
+                <div style="opacity: 1;">
+                    <div class="flex flex-col gap-9 md:xlg:w-2/3 lg:w-full" id="form">
+                        <div>
+                            <div class="relative">
+                                <input id="email" placeholder="Email" class="border-b outline-none text-white border-b-[#D9DADB] bg-transparent p-2 w-full" type="text" name="email">
+                            </div>
+                        </div>
+                        <div class="flex items-center shadow-sm relative p-2 w-full border-b-[#D9DADB] border-b">
+                            <span class="text-white">+994</span>
+                            <input id="phone" class="outline-none text-white border-b-[#D9DADB] bg-transparent px-2 w-full" placeholder="51 511 11 11" type="text">
+                        </div>
+                        <div class="flex !items-center">
+                            <input type="checkbox" id="checkbox" class="mr-2">
+                            <label for="checkbox" class="text-[#D9DADB] cursor-pointer">
+                                Mən <label class="text-[#ffff] font-medium cursor-pointer underline">Qaydalar və şərtlər </label> oxudum və razıyam.
+                            </label>
+                        </div>
+                        <div class="flex justify-end">
+                            <div class="w-max h-max">
+                                <button id="submitBtn" class="flex items-center justify-center bg-[#D52B1E] opacity-30 hover:opacity-100 duration-200 rounded-[20px] w-[170px] h-[45px] text-[#D9DADB] disabled:opacity-50" disabled>Ödənişə keç</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <div id="ticketSummary" class="text-[#D9DADB] bg-[#4D4D4D] flex flex-col justify-between p-5 rounded-xl w-2/3 max-md:w-full">
+                        <div class="flex flex-col gap-2">
+                            <h2 class="text-xl font-medium">Həvəskar</h2>
+                            <p>Metro Park</p>
+                            <p class="flex gap-4"><span>07.05.2025 23:20</span><span>Zal: 1</span></p>
+                            <p class="flex gap-6">Sıra 11, Yer 5 (Ailə)</p>
+                            <p class="flex gap-6">Sıra 2, Yer 5 (Ailə)</p>
+                            <p class="flex gap-6">Sıra 2, Yer 4 (Ailə)</p>
+                        </div>
+                        <p class="font-semibold mt-3">Ümumi: 18 AZN</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,9 +269,6 @@
             <h3 class="text-[#D9DADB] text-sm max-tablet:mt-4">© Park Cinema, <!-- -->2025</h3><a target="_blank" class="text-[#D9DADB] text-sm max-sm:mt-4 hover:text-[#fff] duration-200" href="https://www.esam-innovations.com/">ESAM Innovations</a></div>
     </footer>
     <script src="../js/index.js"></script>
-    <script src="../js/detail.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../js/detailSwiper.js"></script>
-    
+    <script src="../js/detail3.js"></script>
 </body>
 </html>
