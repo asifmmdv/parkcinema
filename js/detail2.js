@@ -75,17 +75,24 @@ for (let i = 0; i < rows; i++) {
     let rowHTML = '<div class="flex gap-1 items-center w-full">';
 
     rowHTML += `
-        <span class="min-w-8 min-h-8 w-10 h-10 text-white  font-bold flex items-center justify-center rounded-sm mr-20 text-xl">
+        <span class="min-w-8 min-h-8 w-10 h-10 text-white font-bold flex items-center justify-center rounded-sm mr-20 text-xl">
             ${rows - i}
         </span>`;
 
+    const createSeat = (seatCount) => `
+        <div class="seat-container min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
+            bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300 relative"
+            onclick="toggleSeatMenu(event, this)">
+            ${seatCount}
+            <div class="seat-menu absolute duration-200 text-black bg-[#FFFFFFCC] dark:bg-[#FFFFFFCC] backdrop-blur-sm rounded-lg overflow-hidden flex flex-col gap-4 opacity-0 invisible z-10 top-full mt-1">
+                <p class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white !hidden">Ailə</p>
+                <p class="text-base text-center py-3 px-8 hover:bg-[#D52B1E] hover:text-white">Böyük</p>
+            </div>
+        </div>`;
+
     if (i === 0) {
         for (let j = 0; j < seatsPerRow; j++) {
-            rowHTML += `
-                <span class="min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
-                bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300">
-                    ${j + 1}
-                </span>`;
+            rowHTML += createSeat(j + 1);
         }
     } else if (i >= 1 && i <= 5) {
         let seatCount = 1;
@@ -93,19 +100,11 @@ for (let i = 0; i < rows; i++) {
             if (j >= seatsPerRow - 2) {
                 rowHTML += '<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>';
             } else if (j < 2) {
-                rowHTML += `
-                    <span class="min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
-                    bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300">
-                        ${seatCount++}
-                    </span>`;
+                rowHTML += createSeat(seatCount++);
             } else if (j >= 2 && j < 4) {
                 rowHTML += '<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>';
             } else {
-                rowHTML += `
-                    <span class="min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
-                    bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300">
-                        ${seatCount++}
-                    </span>`;
+                rowHTML += createSeat(seatCount++);
             }
         }
     } else if (i >= 6 && i <= 10) {
@@ -116,11 +115,7 @@ for (let i = 0; i < rows; i++) {
             } else if (j < 4) {
                 rowHTML += '<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>';
             } else {
-                rowHTML += `
-                    <span class="min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
-                    bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300">
-                        ${seatCount++}
-                    </span>`;
+                rowHTML += createSeat(seatCount++);
             }
         }
     } else if (i === 11) {
@@ -129,11 +124,7 @@ for (let i = 0; i < rows; i++) {
             if (j < 5 || j >= seatsPerRow - 3) {
                 rowHTML += '<span class="min-w-8 min-h-8 w-10 h-10 opacity-0"></span>';
             } else {
-                rowHTML += `
-                    <span class="min-w-8 min-h-8 w-10 h-10 flex rounded-lg duration-200 justify-center items-center text-xl cursor-pointer 
-                    bg-[#C7C7C7] text-[#353535] border border-gray-600 hover:bg-gray-300">
-                        ${seatCount++}
-                    </span>`;
+                rowHTML += createSeat(seatCount++);
             }
         }
     }
@@ -143,6 +134,31 @@ for (let i = 0; i < rows; i++) {
 }
 
 document.getElementById('cinemaContainer').innerHTML = cinemaHTML;
+
+
+function toggleSeatMenu(e, seatElement) {
+    document.querySelectorAll('.seat-menu').forEach(menu => {
+        if (!seatElement.contains(menu)) {
+            menu.classList.add('opacity-0', 'invisible');
+            menu.classList.remove('opacity-100', 'visible');
+        }
+    });
+
+    const menu = seatElement.querySelector('.seat-menu');
+    menu.classList.toggle('opacity-0');
+    menu.classList.toggle('invisible');
+    menu.classList.toggle('opacity-100');
+    menu.classList.toggle('visible');
+
+    e.stopPropagation();
+}
+
+document.onclick = function () {
+    document.querySelectorAll('.seat-menu').forEach(menu => {
+        menu.classList.add('opacity-0', 'invisible');
+        menu.classList.remove('opacity-100', 'visible');
+    });
+};
 
 const container = document.getElementById('cinemaContainer');
 const zoomInBtn = document.getElementById('zoomInBtn');
@@ -184,3 +200,9 @@ zoomOutBtn.onclick = function() {
 checkResponsiveZoom();
 
 window.onresize = checkResponsiveZoom;
+
+
+
+
+
+
