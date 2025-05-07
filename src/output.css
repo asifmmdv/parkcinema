@@ -357,6 +357,9 @@
   .mt-\[7px\] {
     margin-top: 7px;
   }
+  .mr-10 {
+    margin-right: calc(var(--spacing) * 10);
+  }
   .mr-20 {
     margin-right: calc(var(--spacing) * 20);
   }
@@ -1549,6 +1552,21 @@
   .desktop\:mt-30 {
     @media (width >= 770px) {
       margin-top: calc(var(--spacing) * 30);
+    }
+  }
+  .desktop\:mr-10 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 10);
+    }
+  }
+  .desktop\:mr-30 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 30);
+    }
+  }
+  .desktop\:mr-50 {
+    @media (width >= 770px) {
+      margin-right: calc(var(--spacing) * 50);
     }
   }
   .desktop\:ml-35 {
